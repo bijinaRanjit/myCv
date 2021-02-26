@@ -1,0 +1,245 @@
+*{
+    margin: 0;
+    bottom: 0;
+    /* background: green; */
+    font-family: 'Roboto', sans-serif;
+   
+}
+.content{
+    display: flex;
+}
+
+/* left Section Code */
+.content .left{
+    width: auto;
+    height: auto;
+    color:#373740;
+    box-shadow: 2px 0px rgb(0 0 255 / 18%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    background: #ff9d8e;
+}
+/* .upper_section */
+.upper_section{
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+    margin-top: 5%;
+    height:auto;
+}
+.upper_section h1 {
+    letter-spacing: 5px;
+    font-weight:bolder;
+    font-size: 3.5rem;
+}
+.upper_section h4 {
+    font-weight:100;
+    margin-bottom: 10%;
+}
+.profilePic{
+    width: 70%;
+    height: 80vh;
+    overflow:hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 8% auto;
+    transition: all 0.5s ease;
+}
+.profilePic:hover{
+    transform: scale(1.05);
+}
+.profilePic img{
+    width:100%;
+}
+@media screen and (max-width: 1230px) {
+    .upper_section h1{
+        letter-spacing: 1px;
+    }
+}
+@media screen and (max-width: 1016px) {
+    .upper_section h1{
+        font-size:3rem;
+    } 
+    /* 928 */
+}
+/* end of upper_section */
+.lower-section{
+    height: 100vh;
+    background-color: #373740;
+    color: white !important;
+    padding: 0 5%;
+    text-align: justify;
+}
+.profileText{
+    height: auto;
+    margin: 2%;
+    transition: all 0.5s ease;
+}
+.profileText:hover{
+    transform: scale(1.05);
+    background-color: rgba(235, 235, 235, 0.3);
+}
+.lower-section .profileText:hover{
+    background-color: rgba(37, 37, 37, 0.3);
+}
+.profileText p{
+    font-size: small;
+}
+.inforContact{
+    font-size: small;
+}
+
+.inforContact table tr:nth-child(1) td i{
+    color: rgb(59, 91, 152);
+    font-size: 1.5rem;
+}
+.inforContact table tr:nth-child(2) td i{
+    font-size: 1.5rem;
+    background: #f09433; 
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); 
+    background: -webkit-linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    background: linear-gradient(45deg, #f09433 0%,#e6683c 25%,#dc2743 50%,#cc2366 75%,#bc1888 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f09433', endColorstr='#bc1888',GradientType=1 );
+}
+/* right section code */
+.right{
+    /* background: green; */
+    height: auto;
+    width: 70%;
+    padding: 0% 5%;
+}
+.skills li{
+    list-style: none;
+    margin: 20px 0;
+}
+.bar{
+    /* background-color: #ff9d8e ; */
+    display: block;
+    height: 3px;
+    border: 1px solid #373737;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0 10px #ff9d8e;
+}
+.bar span{
+    height: 2px;
+    float: left;
+    background-color: #373740;
+}
+.html, .css, .bootstrap{
+    width: 98%;
+    animation: html 8s;
+}
+.javascripts{
+    width: 50%;
+    animation: js 8s;
+}
+.postman, .jmeter{
+    width: 60%;
+    animation: post 8s;
+}
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+}
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 50%;
+    }
+}
+@keyframes post{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 60%;
+    }
+}
+.textchanger{
+    transition: all 0.5s ease;
+    animation: fade 3s;
+}
+@keyframes fade{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 0.9;
+    }
+}
+/* common code */
+header{
+    margin-top: 10%;
+    font-weight: 800;
+    font-size: larger;
+    text-transform: uppercase
+}
+.line{
+    height: 0.8vh;
+    width: 100%;
+    background-color: #ff9d8e;
+    margin: 3% 0%; 
+}
+table{
+    width: 100%;
+}
+@media screen and (max-width: 749px) {
+    .content{
+        width: 100%;
+        flex-direction: column;
+    }
+    .profilePic{
+        width: 90%;
+        height: 80vh;
+        margin: 1% auto;
+    }
+    .upper_section .lower-section
+    {
+        width: auto;
+    }
+    .right{
+        height: auto;
+        width: 90%;
+        padding: 0% 5%;
+    }
+}
+@media screen and (max-width: 325px){
+    .upper_section h1 {
+        letter-spacing: 0px;
+        font-size: 2rem;
+    }
+    .upper_section h4{
+        font-size: 1rem;
+    }
+    .profilePic{
+        margin: -35% auto;
+    }
+    header{
+        font-size: 1rem;
+    }
+    header p{
+        font-size: 0.5rem;
+    }
+    .lower-section{
+        height: auto;
+        padding: 5% 10%;
+    }
+    .profileText{
+        padding: 2%;
+    }
+    .textchanger table{
+        font-size: 0.8rem;
+    }
+   
+}
+/* end of common code */
