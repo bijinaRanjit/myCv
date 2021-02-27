@@ -1,9 +1,7 @@
 *{
     margin: 0;
     bottom: 0;
-    /* background: green; */
     font-family: 'Roboto', sans-serif;
-   
 }
 .content{
     display: flex;
@@ -19,7 +17,7 @@
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    background: #ff9d8e;
+    background:  #ff9d8e;
 }
 /* .upper_section */
 .upper_section{
@@ -39,8 +37,8 @@
     margin-bottom: 10%;
 }
 .profilePic{
-    width: 70%;
-    height: 80vh;
+    width: 50%;
+    height: 50vh;
     overflow:hidden;
     display: flex;
     align-items: center;
@@ -90,6 +88,7 @@
 }
 .inforContact{
     font-size: small;
+    padding: 2% 0%;
 }
 
 .inforContact table tr:nth-child(1) td i{
@@ -108,7 +107,7 @@
 .right{
     /* background: green; */
     height: auto;
-    width: 70%;
+    width: 80%;
     padding: 0% 5%;
 }
 .skills li{
@@ -131,15 +130,15 @@
 }
 .html, .css, .bootstrap{
     width: 98%;
-    animation: html 8s;
+    animation: html 10s;
 }
 .javascripts{
     width: 50%;
-    animation: js 8s;
+    animation: js 10s;
 }
 .postman, .jmeter{
     width: 60%;
-    animation: post 8s;
+    animation: post 10s;
 }
 @keyframes html{
     0%{
@@ -187,11 +186,14 @@ header{
 .line{
     height: 0.8vh;
     width: 100%;
-    background-color: #ff9d8e;
+    background-color:  #ff9d8e;
     margin: 3% 0%; 
 }
 table{
     width: 100%;
+}
+.space{
+    margin: 200% 0%;
 }
 @media screen and (max-width: 749px) {
     .content{
