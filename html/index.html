@@ -7,11 +7,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
     <title>My CV</title>
 </head>
 <body>
-    <div class="content">
+    <div class="content" id="items">
         <section class="left">
             <div class="upper_section">
                 <div class="profilePic">
@@ -23,14 +25,14 @@
             <!-- Lower Section code -->
             <div class="lower-section">
                 <div class="profileText">
-                    <header>Profile</header>
+                    <header class="title">Profile</header>
                     <div class="line"></div>
                     <p>Currently looking to build my career in QA or even as a
                         developer. I am ready to accept all challenges and
                         complete my assigned task.</p>
                 </div>
                 <div class="profileText">
-                    <header>Contact information</header>
+                    <header class="title">Contact information</header>
                     <div class="line"></div>
                     <div class="inforContact">
                         <table>
@@ -50,17 +52,19 @@
                     </div>
                 </div>
                 <div class="profileText">
-                    <header>Social Media</header>
+                    <header class="title">Social Media</header>
                     <div class="line"></div>
                     <div class="inforContact">
                         <table>
                             <tr>
                                 <td><i class="fa fa-facebook-f"></i></td>
-                                <td>9849713510</td>
+                                <td><a href="https://www.facebook.com/trina.ranjit" target="_blank">trina.ranjit</a></td>
                             </tr>
                             <tr>
                                 <td><i class="fa fa-instagram"></i></td>
-                                <td>zeenaranjitkar011@gmail.com</td>
+                                <td>
+                                    <a href="https://www.instagram.com/zeena_ranjitkar/" target="_blank">zeena_ranjitkar/</a>
+                                </td>
                             </tr>
                         </table>
                     </div>
@@ -71,12 +75,21 @@
         <section class="right">
         <!-- work experience -->
         <div class="profileText textchanger">
-            <header>Education</header>
+            <header class="title">Education</header>
             <div class="line"></div>
             <table>
                 <tr>
                     <td><b>2017-2020</b></td>
-                    <td><b>International Institute of Management and Science</b></td>
+                    <td>
+                        <b>
+                            <li>
+                                <span onclick="myFunctioni()" class="tooltip">International Institute of Management and Science
+                                    <span class="tooltiptext">Click Me to Know Location</span>
+                                </span>
+                            </li>
+                            <p id="iims"></p>
+                        </b>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -84,7 +97,16 @@
                 </tr>
                 <tr>
                     <td><b>2015-2017</b></td>
-                    <td><b>+2 NCCS Hgher Sec. School</b></td>
+                    <td>
+                        <b>
+                            <li>
+                                <span onclick="myFunctionn()" class="tooltip">National College Of Computer Science
+                                    <span class="tooltiptext">Click Me to Know Location</span>
+                                </span>
+                            </li>
+                            <p id="nccs"></p>
+                        </b>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -92,7 +114,16 @@
                 </tr>
                 <tr>
                     <td><b>2014</b></td>
-                    <td><b>Rising Star Higher Secondary Sbhool</b></td>
+                    <td>
+                        <b>
+                            <li>
+                                <span onclick="myFunctionr()" class="tooltip">Rising Star Higher Secondary School
+                                    <span class="tooltiptext">Click Me to Know Location</span>
+                                </span>
+                            </li>
+                            <p id="rising"></p>
+                        </b>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -102,12 +133,21 @@
         </div>
         <!-- training -->
         <div class="profileText textchanger">
-            <header>Work Experience</header>
+            <header class="title">Work Experience</header>
             <div class="line"></div>
             <table>
                 <tr>
                     <td><b>Aug 2018 - Jan2019</b></td>
-                    <td><b>ITGlance - Web Developer</b></td>
+                    <td>
+                        <b>
+                            <li>
+                                <span onclick="myFunctionit()" class="tooltip">ITGLANCE - Web Developer
+                                    <span class="tooltiptext">Click Me to Know Location</span>
+                                </span>
+                            </li>
+                            <p id="itg"></p>
+                        </b>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -119,7 +159,16 @@
                 </tr>
                 <tr>
                     <td><b>Dec 2019 - June2020 </b></td>
-                    <td><b>DSEWA - Frontend Developer</b></td>
+                    <td>
+                        <b>
+                            <li>
+                                <span onclick="myFunctiond()" class="tooltip">DSEWA - FrontEnd Developer
+                                    <span class="tooltiptext">Click Me to Know Location</span>
+                                </span>
+                            </li>
+                            <p id="dsewa"></p>
+                        </b>
+                    </td>
                 </tr>
                 <tr>
                     <td></td>
@@ -132,13 +181,14 @@
         </div>
         <!-- Cerfticatate -->
         <div class="profileText textchanger">
-            <header>Certificate</header>
+            <header class="title">Certificate</header>
             <div class="line"></div>
             <table>
                 <tr>
                     <td>
                         <ul>
-                            <li>Web Development Certicate - ITGlance Academy Frontend</li>
+                            <li><span onclick="myFunction()">Web Development Certicate - ITGlance Academy Frontend</span></li>
+                            <p id="demo"></p>
                         </ul>
                     </td>
                 </tr>
@@ -153,8 +203,8 @@
         </div>
         <!-- skills -->
         <div class="profileText textchanger skills">
-            <header>Skills</header>
-            <div class="line"></div>
+            <header class="title" id="items">Skills</header>
+            <div class="line" ></div>
             <!-- html -->
             <li>
                 <h3>HTML</h3>
@@ -204,17 +254,30 @@
             </li>
             
         </div>
+        <div class="profileText">
+            <button data-model-target="#model" class="hire">Hire Me</button>
+            <div class="model" id="model">
+                <div class="model-header">
+                    <div class="title-model">Map</div>
+                    <button data-close-button class="close-button">&times;</button>
+                </div>
+                <div class="model-body">
+                    <form action="#">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit" value="Submit">
+                      </form>
+                </div>
+                
+            </div>
+        </div>
+       
         </section>
     </div>
+    <div id="overlay"></div>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-	</script>
-	<script>
-		$(document).ready(function () {
-
-			$('#div1').after('<div><table><tr>hello</tr> <tr>good to see You </tr></table> </div>');
-
-		}); -->
-	</script>
+    <script src="../js/index.js"></script>
 </body>
 </html>

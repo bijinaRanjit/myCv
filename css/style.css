@@ -5,6 +5,7 @@
 }
 .content{
     display: flex;
+    position:relative;
 }
 
 /* left Section Code */
@@ -195,6 +196,44 @@ table{
 .space{
     margin: 200% 0%;
 }
+td b li span{
+    cursor: pointer;
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    color: #ff9d8e;
+    text-align: center;
+    border-radius: 6px;
+    /* padding: 1px 0; */
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    
+}
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent #ff9d8e transparent transparent;
+  }
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+    color:#fff;
+}
 @media screen and (max-width: 749px) {
     .content{
         width: 100%;
@@ -245,3 +284,76 @@ table{
    
 }
 /* end of common code */
+
+
+/* map */
+.hire{
+    padding: 12px 15px;
+    background: #ff9d8e;
+    border: none;
+    border-radius: 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: 1s;
+}
+.hire:hover{
+    color: #ff9d8e;
+    border: 3px solid #ff9d8e;
+    background: none;
+}
+.model{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 1s ease;
+    border: 1px solid #fff;
+    border-radius: 10px;
+    z-index: 100; 
+    background-color: #373740;
+    color:#fff;
+    width: 500px;
+    max-width: 80%;
+    height: auto;
+}
+.model.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+.model-header{
+    display: flex;
+    padding: 15px 15px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+.close-button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 2rem;
+    transition: 2s;
+    color:#fff;
+}
+.close-button:hover{
+    /* transform: scale(1.50); */
+}
+.model-body{
+    padding: 15px 15px;
+}
+#overlay{
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    pointer-events: none;
+    transition: 1s ease;
+}
+#overlay.active{
+    opacity: 1;
+    pointer-events: all;
+}
